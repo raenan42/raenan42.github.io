@@ -1,0 +1,243 @@
+/* INTENTIONALLY UGLY STARTER STYLES */
+/* These styles are very, very ugly. */
+/* Time to make them attractive, legible, and usable */
+
+body {
+    
+    background-color: #1F3EA4;
+    margin: 40px;
+    padding: 10px;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "meta meta"
+        "description description"
+        "ingredients-instructions ingredients-instructions"
+        "footer footer"
+        "aesthetic-link aesthetic-link"
+}
+
+.recipe-header {
+    grid-area: header;
+    height: 299px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-title {
+    color: #9a1212;
+    font-family: "Lakki Reddy";
+        font-weight: 600;
+        font-style: normal;
+        text-align: center;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: normal;
+    padding-top: 37px;
+}
+
+.recipe-meta { 
+    grid-area: meta;
+    font-family: "Russo One", sans-serif;
+        font-size: 18px;
+        color: #1B257B;
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    
+}
+
+.meta-item {
+    height: 100px;
+    background: #66CCFF;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 10px;
+    width: 20%;
+}
+
+.image-section {
+    display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    width: 85%;
+    padding-bottom: 20px;
+}
+
+.recipe-description {
+    grid-area: description;
+    align-self: center;
+    font-family: "Russo One", sans-serif;
+        font-weight: 424;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 20px;
+        font-style: normal;
+        line-height: normal;
+    width: 100%;
+}
+
+.ingredients-instructions-section {
+    grid-area: ingredients-instructions;
+    display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+    background-color: #FFC547;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.ingredients-section {
+    background-color: #FFFFFF;
+    font-family: "Lakki Reddy";
+        font-weight: 800;
+        font-style: normal;
+        font-size: 25px;
+        color: #9a1212;
+    height: 455px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 70%;
+}
+
+.ingredients-list {
+    list-style: none;
+}
+
+.ingredients-list li {
+    font-family: "Russo One", sans-serif;
+        color: #1F3EA4;
+        font-weight: 424;
+        font-style: normal;
+        font-size: 18px;
+    margin: 2px;
+    padding-bottom: 10px;
+}
+
+.instructions-section {
+ background: #FFFFFF;
+    font-family: "Lakki Reddy";
+        font-weight: 800;
+        font-style: normal;
+        font-size: 25px;
+        color: #9a1212;
+height: 455px;
+border-radius: 10px;
+padding: 10px;
+}
+
+.instruction-step { 
+    font-family: "Russo One", sans-serif;
+        color: #1F3EA4;
+        font-weight: 424;
+        font-style: normal;
+        font-size: 18px;
+    list-style-position: inside;
+    margin: 3px;
+    padding-bottom: 10px;
+}
+
+.recipe-footer {
+    grid-area: footer;
+    height: 50px;
+    background: #66CCFF;
+    font-family: "Russo One", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #1B257B;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recipe-image {
+    width: 125px;
+    height: 125px;
+    justify-self: center;
+    border-radius: 22px;
+}
+
+.aesthetic-link {
+    grid-area: aesthetic-link;
+    font-family: "Russo One", sans-serif;
+        color: #000000;
+    background-color: #FFFFFF;
+}
+
+* {
+    margin: 2px;
+    padding: 1px;
+}
+
+@media (max-width: 60rem) {
+ body {
+    margin: 10px;
+    padding: 5px;
+}
+ 
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+}
+
+  .recipe-title {
+    font-size: 45px;
+}
+
+.meta-item {
+    font-size: 12px;
+}
+
+.recipe-description {
+    font-size: 10px;
+}
+
+.ingredients-instructions-section {
+    flex-direction: column;
+    justify-self: flex-start;
+    align-self: flex-start;
+    width: 100%;
+    padding: 10px;
+    gap: 1px;
+    align-items: center;
+}
+
+.ingredients-section {
+    width: 90%;
+}
+
+.ingredients-list li {
+    font-size: 14px;
+}
+
+.instruction-step {
+    font-size: 10px;
+}
+
+.recipe-image {
+    width: 50px;
+    height: 50px;
+}
+
+.recipe-footer {
+    font-size: 10px;
+}
+}
